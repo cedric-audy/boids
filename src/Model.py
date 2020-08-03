@@ -6,6 +6,7 @@ class Model:
         self.worldSettings = WorldSettings()
         self.boidSettings = BoidSettings()
         self.boids = [Boid(1)] * self.worldSettings.initialPopulation #boids objects
+
 # ===============================================================================================
 class BoidSettings:
     # ===============================================================================================
@@ -15,6 +16,7 @@ class BoidSettings:
 
 # ===============================================================================================
 class WorldSettings:
+    # ===============================================================================================
     def __init__(self):
         self.width = 2048
         self.height = 1024
