@@ -10,24 +10,24 @@ class Model:
         self.boids = [Boid(1)] * self.worldSettings.initialPopulation #boids objects
     
     # ===============================================================================================
-    @staticmethod
-    def rule1(boids, factor):
+    # @staticmethod
+    def rule1(self):
         #cohesion
         #c = (b1.position + b2.position + ... + bN.position) / N
         centerOfMass = 0
-        for b in boids:
+        for b in self.boids:
             centerOfMass += b.position
         
         return (centerOfMass / len(boids) - 1) / factor
 
     # ===============================================================================================
-    @staticmethod
-    def rule2(boids):
+    # @staticmethod
+    def rule2(self):
         #separation
         x = 1
     # ===============================================================================================
-    @staticmethod
-    def rule3(boids):
+    # @staticmethod
+    def rule3(self):
         #alignment
         x = 1
 
